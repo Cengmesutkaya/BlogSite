@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>@Html.Raw(ViewBag.Title)</title>
+    <meta name="description" content="@(Html.Raw(ViewBag.Description))">
+    <meta name="keywords" content="@(Html.Raw(ViewBag.Keywords))">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="@Url.Content("~/Content/img/favicon.png")" />
+    <!-- Place favicon.ico in the root directory -->
+    <!-- all css here -->
+    <!-- bootstrap.min.css -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/bootstrap.min.css")">
+    <!-- font-awesome.min.css -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/font-awesome.min.css")">
+    <!-- owl.carousel.min.css -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/owl.carousel.css")">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/animate.css")">
+    <!-- meanmenu.min.css -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/meanmenu.min.css")">
+    <!-- shortcodes.css -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/shortcode/shortcodes.css")">
+    <!-- style.css -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/style.css")">
+    <!-- responsive.css -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/responsive.css")">
+    <!-- modernizr-js -->
+    <script src="@Url.Content("~/Content/js/vendor/modernizr-2.8.3.min.js")"></script>
+</head>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <!-- header-start -->
+    <div id="preloader"></div>
+    <header>
+        <div class="header-area white-bg" id="main_h">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-8">
+                        <div class="logo">
+                            <a href="@Url.Action("","")"><img src="@Url.Content("/Content/img/logo.png")" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 hidden-sm hidden-xs col-md-7">
+                        <div class="mainmenu">
+                            <nav>
+                                <ul>
+                                    <li class="active">
+                                        <a href="@Url.Action("","")">Anasayfa</a>
+                                    </li>
+                                    <li>
+                                        <a href="/seyahat">Seyahat</a>
+                                    </li>
+                                    <li>
+                                        <a href="/eglence">Eğlence</a>
+                                    </li>
+                                    <li>
+                                        <a href="/alisveris">Alışveriş</a>
+                                    </li>
+                                    <li>
+                                        @Html.Action("Authors", "Home")
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4">
+                        <div class="header-search">
+                            <form action="#">
+                                <input type="text" placeholder="Search Now.." />
+                                <button class="header-btn"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile-menu-area-start -->
+            <div class="mobile-menu-area visible-xs visible-sm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mobile-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li class="active">
+                                            <a href="#">Anasayfa</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Seyahat</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Eğlence</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Alışveriş</a>
+                                        </li>
+                                        <li>
+                                            @Html.Action("Authors","Home")
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile-menu-area-end -->
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- page-header-area-start -->
+    <div class="page-header-area ptb-140">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-header-text text-center text-white">
+                        <h2 class="page-title">Lifestyle</h2>
+                        <ul class="breadcrumb">
+                            <li><a href="#">Home</a></li>
+                            <li class="active"><span>Lifestyle</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page-header-area-end -->
+    <!-- post-content-area-start -->
+    <div class="post-content-area ptb-80">
+
+        @RenderBody()
+
+    </div>
+    <!-- post-content-area-end -->
+    <!-- instagram-area-start -->
+    <div class="instagram-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="instagram-wrap">
+                    <div class="instagram-img-wrap">
+                        <div class="col-xs-12 col-sm-2 pn">
+                            <a href="#"><img src="~/Content/img/instagram/1.jpg" alt="Responsive Image"></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-2 pn">
+                            <a href="#"><img src="~/Content/img/instagram/2.jpg" alt="Responsive Image"></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-2 pn">
+                            <a href="#"><img src="~/Content/img/instagram/3.jpg" alt="Responsive Image"></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-2 pn">
+                            <a href="#"><img src="~/Content/img/instagram/4.jpg" alt="Responsive Image"></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-2 pn">
+                            <a href="#"><img src="~/Content/img/instagram/1.jpg" alt="Responsive Image"></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-2 pn">
+                            <a href="#"><img src="~/Content/img/instagram/5.jpg" alt="Responsive Image"></a>
+                        </div>
+                    </div>
+                    <div class="instagram-caption">
+                        <div class="instagram-caption-inside">
+                            <div class="instagram-caption-content">
+                                <ul class="details-link">
+                                    <li><a href="#">Follow us @@ Instagram</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- instagram-area-end -->
+    <!-- brand-area-start -->
+    <div class="brand-area ptb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="social-feed">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i>FACEBOOK</a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i>TWITTER</a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i>INSTAGRAM</a></li>
+                            <li><a href="#"><i class="fa fa-pinterest-p"></i>PINTEREST</a></li>
+                            <li><a href="#"><i class="fa fa-heart-o"></i>BLOGLOVEIN</a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i>GOOGLE+</a></li>
+                            <li><a href="#"><i class="fa fa-tumblr"></i>TUMBLR</a></li>
+                            <li><a href="#"><i class="fa fa-rss"></i>RSS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- brand-area-end -->
+    <!-- footer-start -->
+    <footer>
+        <div class="footer-area footer-bg ptb-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="footer-widget">
+                            <div class="footer-title mb-30">
+                                <h3>About Us <i class="fa fa-long-arrow-right"></i></h3>
+                            </div>
+                            <div class="widget-text">
+                                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit </p>
+                            </div>
+                            <div class="footer-newsletter mt-30">
+                                <form action="#">
+                                    <input type="text" placeholder="Enter your email" />
+                                    <button><i class="fa fa-paper-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 hidden-sm col-xs-12">
+                        <div class="footer-widget">
+                            <div class="footer-title mb-30">
+                                <h3>Archives <i class="fa fa-long-arrow-right"></i></h3>
+                            </div>
+                            <div class="footer-archives">
+                                <ul class="archive-content">
+                                    <li><a href="#"><i class="fa fa-check-square-o"></i> JUNE 2016</a></li>
+                                    <li><a href="#"><i class="fa fa-check-square-o"></i> MAY 2016</a></li>
+                                    <li><a href="#"><i class="fa fa-check-square-o"></i> APRIL 2016</a></li>
+                                    <li><a href="#"><i class="fa fa-check-square-o"></i> MARCH 2016</a></li>
+                                    <li><a href="#"><i class="fa fa-check-square-o"></i> FEBRUARY 2016</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="footer-widget">
+                            <div class="footer-title mb-30">
+                                <h3>Twitter <i class="fa fa-long-arrow-right"></i></h3>
+                            </div>
+                            <ul class="weidget-twitter">
+                                <li>
+                                    <p>
+                                        <a href="#"><span>@@engadged:&nbsp;</span></a>Google's first indie gaming festival comes to San Francisco this fall<a href="#"> https://t.co/NsAr2gcykp</a>
+                                        <br />2 weeks ago
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <a href="#"><span>@@engadged:&nbsp;</span></a>Google's first indie gaming festival comes to San Francisco this fall<a href="#"> https://t.co/NsAr2gcykp</a>
+                                        <br />2 weeks ago
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-end -->
+    <!-- copyright-area-start -->
+    <div class="copyright-area ptb-30 black-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12">
+                    <div class="copyright-left">
+                        <p>� Copyright 2016 - Perculatheme. All Rights Reserved.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-5 col-xs-12">
+                    <div class="copyright-right">
+                        <p>Designed & Developed by : <a href="#">Perculatheme</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- copyright-area-end -->
+    <!-- all js here -->
+    <!-- main-js -->
+    <script src="~/Content/js/vendor/jquery-1.12.0.min.js"></script>
+    <!-- bootstrap.min.js -->
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <!-- owl.carousel.min.js -->
+    <script src="~/Content/js/owl.carousel.min.js"></script>
+    <!-- jquery.scrollUp.js -->
+    <script src="~/Content/js/jquery.scrollUp.js"></script>
+    <!-- jquery.waypoints.min.js -->
+    <script src="~/Content/js/jquery.waypoints.min.js"></script>
+    <!-- jquery.meanmenu.js -->
+    <script src="~/Content/js/jquery.meanmenu.js"></script>
+    <!-- jquery.sticky.js -->
+    <script src="~/Content/js/jquery.sticky.js"></script>
+    <!-- plugins.js -->
+    <script src="~/Content/js/plugins.js"></script>
+    <!-- main.js -->
+    <script src="~/Content/js/main.js"></script>
+</body>
+</html>
+

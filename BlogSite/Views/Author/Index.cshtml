@@ -1,0 +1,77 @@
+﻿@model IEnumerable<BlogSite.Models.ArticleByCategory>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <div class="post-blog-area lifestyle-area">
+                @foreach (var item in Model)
+                {
+                    <div class="single-post-item mb-50">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="single-post">
+                                    <div class="single-post-img">
+                                        <img src="@item.ImageUrl" alt="" />
+                                    </div>
+                                    <div class="single-post-text">
+                                        <a href="#"><h3>@item.Title</h3></a>
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-clock-o"></i> @item.ArticleDate</a></li>
+                                            <li><a href="#"><i class="fa fa-pencil"></i>@item.AuthorName</a></li>
+                                            <li><a href="#"><i class="fa fa-eye"></i> @item.ArticleReading</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="single-post-right">
+                                    <a href="#" class="post-category lifestyle"><h3>@item.ArticleCategory</h3></a>
+                                    <a href="#"><h4>@item.Title</h4></a>
+                                    @if (item.Content.ToString().Length > 250)
+                                    {
+                                        <p>@item.Content.Substring(0, 250) ... <a style="color:#49b293" href="/@BlogSite.Utils.UrlDuzenleme.UrlCevir(item.ArticleCategory).ToLower()/@item.ArticleUrl"> Devamını Oku</a></p>
+                                    }
+                                    else
+                                    {
+                                        <p> @item.Content</p>
+                                    }
+
+                                    <a href="/@BlogSite.Utils.UrlDuzenleme.UrlCevir(item.ArticleCategory).ToLower()/@item.ArticleUrl" class="post-top-btn m-0">Devamını oku</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="sidebar-area-lifestyle">
+
+                @Html.Action("AuthorArea", "Author")
+
+                @Html.Action("InstagramArea", "Home")
+
+                @Html.Action("TopArticle", "Home")
+
+
+                <div class="sidebar-widget mb-50">
+                    <div class="widget-title text-center">
+                        <h4 class="title important-link mb-30">Important Links</h4>
+                    </div>
+                    <ul class="important-links">
+                        <li><i class="fa fa-link"></i><a href="#">http://www.wordica.net ...</a></li>
+                        <li><i class="fa fa-link"></i><a href="#">https://www.youtube.com ...</a></li>
+                        <li><i class="fa fa-link"></i><a href="#">https://themeforest.net ...</a></li>
+                        <li><i class="fa fa-link"></i><a href="#">http://example.com ...</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

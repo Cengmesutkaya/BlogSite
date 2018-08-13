@@ -1,0 +1,8 @@
+﻿
+<a href="#">Yazarlarımız <i class="fa fa-caret-down"></i></a>
+<ul>
+    @foreach (var item in @ViewBag.AuthorList)
+    {
+        <li><a href="/yazarlar/@BlogSite.Utils.UrlDuzenleme.UrlCevir(item.Author).ToLower()">@item.Author</a></li>
+    }
+</ul>

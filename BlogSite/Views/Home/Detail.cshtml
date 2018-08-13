@@ -1,0 +1,138 @@
+﻿@model BlogSite.Models.ArticleViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+  <!-- post-content-area-start -->
+<div class="post-content-area ptb-80 standard-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="section-title text-center">
+                    <h4 class="text-uppercase">@Model.ArticleCategory</h4>
+                    <h3>@Model.Title</h3>
+                    <span>@Model.ArticleDate</span>
+                </div>
+                <div class="post-top">
+                    <div class="post-img mtb-50">
+                        <img src="img/post-header/4.jpg" alt="" />
+                    </div>
+                    <div class="post-top-info">
+                        <p>@Model.Content</p>
+                    </div>
+                 
+                    <div class="feature-post-btn mtb-40">
+                        <ul>
+                            @foreach (var item in Model.ArticleTags)
+                            {
+                                <li><a href="#">@item</a></li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="post-top-footer">
+                        <div class="post-top-social floatright">
+                            <span>Share:</span>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-author fix mtb-50">
+                    <div class="author-img-2">
+                        <img src="@Model.AuthorImageUrl" alt="" />
+                    </div>
+                    <div class="author-text">
+                        <div class="author-title">
+                            <h3>@Model.AuthorName</h3>
+                        </div>
+                        <p>@Model.AuthorAbout </p>
+                        <div class="author-icon">
+                            <a href="@Model.AuthorFacebook"><i class="fa fa-facebook"></i></a>
+                            <a href="@Model.AuthorTwitter"><i class="fa fa-twitter"></i></a>
+                            <a href="@Model.AuthorInstagram"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-another-post">
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <h5 class="leads">Bunları da Okumak İster misiniz?</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="single-post">
+                                <div class="single-post-img">
+                                    <img src="~/Content/img/blog/1.jpg" />
+                                </div>
+                                <div class="single-post-text">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-clock-o"></i> Aug 8,2016</a></li>
+                                        <li><a href="#"><i class="fa fa-commenting-o"></i> 500</a></li>
+                                        <li><a href="#"><i class="fa fa-eye"></i> 1928</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="single-post">
+                                <div class="single-post-img">
+                                    <img src="~/Content/img/blog/2.jpg" />
+                                </div>
+                                <div class="single-post-text">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-clock-o"></i> Aug 8,2016</a></li>
+                                        <li><a href="#"><i class="fa fa-commenting-o"></i> 500</a></li>
+                                        <li><a href="#"><i class="fa fa-eye"></i> 1928</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="single-post">
+                                <div class="single-post-img">
+                                    <img src="~/Content/img/blog/4.jpg" />
+                                </div>
+                                <div class="single-post-text">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-clock-o"></i> Aug 8,2016</a></li>
+                                        <li><a href="#"><i class="fa fa-commenting-o"></i> 500</a></li>
+                                        <li><a href="#"><i class="fa fa-eye"></i> 1928</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              
+                </div>
+            </div>
+      
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+               
+                 <div class="sidebar-area-standard">
+                    
+                     @Html.Action("Advertisement", "Home")
+
+                     @Html.Action("InstagramArea", "Home")
+
+                    @Html.Action("TopArticle","Home")
+          
+                    <div class="sidebar-widget mb-50">
+                        <div class="widget-title text-center">
+                            <h4 class="title important-link mb-30">Important Links</h4>
+                        </div>
+                        <ul class="important-links">
+                            <li><i class="fa fa-link"></i><a href="#">http://www.wordica.net ...</a></li>
+                            <li><i class="fa fa-link"></i><a href="#">https://www.youtube.com ...</a></li>
+                            <li><i class="fa fa-link"></i><a href="#">https://themeforest.net ...</a></li>
+                            <li><i class="fa fa-link"></i><a href="#">http://example.com ...</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- post-content-area-end -->
+

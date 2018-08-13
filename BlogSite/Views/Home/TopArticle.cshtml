@@ -1,0 +1,29 @@
+﻿@model IEnumerable<BlogSite.DataEntities.Article>
+<div class="sidebar-widget mb-50">
+    <div class="widget-title text-center">
+        <h4 class="title mb-30">Popüler</h4>
+    </div>
+    <ul class="sidebar-tab mb-30">
+        <li class="active"><a href="#home" data-toggle="tab"></a></li>
+        <li><a href="#profile" data-toggle="tab"></a></li>
+    </ul>
+    <div class="tab-content fade in">
+        <div class="tab-pane active" id="home">
+            <ul class="thumb-list">
+                @foreach (var item in Model)
+                {
+                    <li class="mb-30">
+                        <div class="thumb-img">
+                            <img src="@item.ImageUrl" />
+                        </div>
+                        <div class="thumb-text">
+                            <a href="#"><h4>@item.Title</h4></a>
+                            <span>@item.ArticleDate | <i class="fa fa-eye">@item.ReadingCount</i> </span>
+                        </div>
+                    </li>
+                }
+               
+            </ul>
+        </div>
+    </div>
+</div>
